@@ -1,8 +1,17 @@
+body{
+    margin: 0%;
+}
 header{
     background-color: royalblue;
     padding-bottom: 5%;
+    text-align: center;
+   
+}
+main{
+    margin: 1% 0% 28% 0%;
 }
 footer{
+    text-align: center;
     background-color: green;
     padding-bottom: 5%;
 }
