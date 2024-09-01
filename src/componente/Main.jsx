@@ -14,7 +14,21 @@ export default function Main() {
             }
         ]);
     };
+
     console.table(listaContatos);
+
+    const remover = (id) => {
+        const novaLista = listaContatos.filter(
+            (contato, index) =>{
+                if(index !== id){
+                    return contato
+                }else{
+                    return null
+                }
+            }
+        );
+        setListaContatos(novaLista);
+    }
     return(
         <main>    
             <label htmlFor="nome">Nome</label>
@@ -24,13 +38,13 @@ export default function Main() {
             <input type="tel" name="" id="" onChange={(event)=> setTelefone(event.target.value)}/>
             {telefone}
             <button onClick={(registrar)}>Salvar</button>
+
             {
                 listaContatos.map((contato, index) =>
             <div key={index}>
-                <div className="oi">
                 <p>{contato.NomeSalvo}</p>
                 <p>{contato.telefoneSalvo}</p>
-                </div>
+                <button onClick={()=> remover(index)}>X</button>
                 </div>
             )}
         </main>
