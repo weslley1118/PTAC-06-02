@@ -15,3 +15,6 @@ footer{
     background-color: green;
     padding-bottom: 5%;
 }
+.oi{
+    display: flex;
+}
